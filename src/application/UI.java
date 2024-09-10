@@ -12,6 +12,8 @@ import chess.ChessPosition;
 import chess.Color;
 
 public class UI {
+	
+	private static int alternateBoardColor = 1;
 
 	// https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println
 
@@ -100,9 +102,11 @@ public class UI {
 		if (background) {
 			System.out.print(ANSI_BLUE_BACKGROUND);
 		}
-
+		
 		if (piece == null) {
-			System.out.print("-" + ANSI_RESET);
+			
+			System.out.print( "-" + ANSI_RESET);
+
 		} else {
 			if (piece.getColor() == Color.WHITE) {
 				System.out.print(ANSI_WHITE + piece + ANSI_RESET);
